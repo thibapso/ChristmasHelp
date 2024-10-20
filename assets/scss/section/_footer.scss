@@ -1,0 +1,10 @@
+@use "../variables";
+
+// Adicione estilos para o footer aqui
+.footer {
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+  background-color: variables.$dark-color;
+  color: variables.$light-color;
+}

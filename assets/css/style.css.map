@@ -1,0 +1,14 @@
+{
+	"version": 3,
+	"sourceRoot": "",
+	"sources": [
+		"../scss/_variables.scss",
+		"../scss/section/_start.scss",
+		"../scss/section/_time.scss",
+		"../scss/section/_arvore.scss",
+		"../scss/section/_footer.scss"
+	],
+	"names": [],
+	"mappings": "AAAA;AAEQ;AAUR;AAMA;AAaA;AAEA;EACE;;;AAGF;EACE;EACA,YA1BY;;;AA6Bd;EACE;;;ACzCF;EACE,aDCK;;;ACEP;EACE;EACA;EACA;EACA;EACA;EACA;;;AAGF;EACE;EACA;EACA;;;AAGF;EACE;EACA;EACA;EACA;EACA;EACA;;;AAGF;EACE;EACA;EACA;EACA;EACA;EACA;EACA;;;AAGF;EACE;;;AAGF;EACE;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;;;AAGF;EACE;;;AAGF;EACE;EACA;;;AChEF;EACE;EACA;;;AAGF;EACE;EACA;EACA;EACA;EACA;;;AAGF;EACE;EACA;EACA;;;AChBF;EACE;EACA;EACA;;;AAGF;EACE;EACA;;;ACPF;EACE;EACA;EACA;EACA,kBJQW;EIPX,OJQY",
+	"file": "style.css"
+}

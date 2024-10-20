@@ -1,0 +1,124 @@
+/* ___ Fonts ___ */
+@import url("https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&display=swap");
+/* ___ Colors ___ */
+/* ___ Media Query ___ */
+/* ___ Scrollbar ___ */
+html ::-webkit-scrollbar {
+  width: 10px;
+}
+
+html ::-webkit-scrollbar-thumb {
+  border-radius: 20px;
+  background: #cd3c32;
+}
+
+html ::-webkit-scrollbar-track {
+  background: rgba(41, 42, 44, 0.03);
+}
+
+body {
+  font-family: "Archivo", "Calibri", "sans-serif";
+}
+
+.start__content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem 10rem;
+  background: #ffe9e8;
+  gap: 5rem;
+}
+
+.start__first {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.start__tag {
+  color: #161212;
+  font-family: Archivo;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.start__titulo {
+  color: #121214;
+  font-family: Archivo;
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 120%;
+  width: 25rem;
+}
+
+.start__titulo span {
+  color: #cd3c32;
+}
+
+.button {
+  display: flex;
+  padding: 0.8rem 2rem;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.25rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #ffffff;
+  background: #cd3c32;
+  width: 40%;
+  transition: 0.3s;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.button:hover {
+  background: #cf291e;
+}
+
+.start__img img {
+  width: 31.25rem;
+  height: 21.1875rem;
+}
+
+.time {
+  display: flex;
+  justify-content: center;
+}
+
+.time__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.time__content img {
+  width: 30rem;
+  height: 20rem;
+  object-fit: cover;
+}
+
+.arvore {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.arvore div img {
+  width: 18.5rem;
+  height: 17.5rem;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+  background-color: #121214;
+  color: #ffffff;
+}
+
+/*# sourceMappingURL=style.css.map */

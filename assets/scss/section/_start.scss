@@ -1,0 +1,68 @@
+@use "../variables";
+
+body {
+  font-family: variables.$font;
+}
+
+.start__content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem 10rem;
+  background: #ffe9e8;
+  gap: 5rem;
+}
+
+.start__first {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.start__tag {
+  color: #161212;
+  font-family: Archivo;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.start__titulo {
+  color: #121214;
+  font-family: Archivo;
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 120%;
+  width: 25rem;
+}
+
+.start__titulo span {
+  color: #cd3c32;
+}
+
+.button {
+  display: flex;
+  padding: 0.8rem 2rem;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.25rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #ffffff;
+  background: #cd3c32;
+  width: 40%;
+  transition: 0.3s;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.button:hover {
+  background: #cf291e;
+}
+
+.start__img img {
+  width: 31.25rem;
+  height: 21.1875rem;
+}
