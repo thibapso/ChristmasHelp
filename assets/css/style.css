@@ -3,6 +3,10 @@
 /* ___ Colors ___ */
 /* ___ Media Query ___ */
 /* ___ Scrollbar ___ */
+html {
+  scroll-behavior: smooth;
+}
+
 html ::-webkit-scrollbar {
   width: 10px;
 }
@@ -28,37 +32,49 @@ body {
   background: #ffe9e8;
   gap: 5rem;
 }
-
 .start__first {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
 }
-
+.start__tagging {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
 .start__tag {
-  color: #161212;
-  font-family: Archivo;
+  color: #121214;
+  font-family: "Archivo", "Calibri", "sans-serif";
   font-size: 1rem;
   font-style: normal;
   font-weight: 500;
   line-height: normal;
 }
-
 .start__titulo {
   color: #121214;
-  font-family: Archivo;
+  font-family: "Archivo", "Calibri", "sans-serif";
   font-size: 2rem;
   font-style: normal;
   font-weight: 600;
   line-height: 120%;
   width: 25rem;
 }
-
 .start__titulo span {
   color: #cd3c32;
 }
-
-.button {
+.start__paragraph {
+  color: #121214;
+  font-family: "Archivo", "Calibri", "sans-serif";
+  font-size: 1.25rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+  max-width: 34rem; /* Ajuste este valor para controlar a quebra */
+}
+.start__link {
+  text-decoration: none;
+}
+.start__button {
   display: flex;
   padding: 0.8rem 2rem;
   justify-content: center;
@@ -68,16 +84,13 @@ body {
   font-weight: 700;
   color: #ffffff;
   background: #cd3c32;
-  width: 40%;
+  width: 12rem;
   transition: 0.3s;
   cursor: pointer;
-  text-decoration: none;
 }
-
-.button:hover {
+.start .button:hover {
   background: #cf291e;
 }
-
 .start__img img {
   width: 31.25rem;
   height: 21.1875rem;
@@ -86,8 +99,8 @@ body {
 .time {
   display: flex;
   justify-content: center;
+  padding: 5rem 0;
 }
-
 .time__content {
   display: flex;
   flex-direction: column;
@@ -95,7 +108,17 @@ body {
   align-items: center;
   text-align: center;
 }
-
+.time__content h2 {
+  margin-bottom: 1.5rem;
+  font-size: 2.5rem;
+  color: #121214;
+  font-weight: 700;
+}
+.time__content p {
+  display: flex;
+  text-align: center;
+  width: 24rem;
+}
 .time__content img {
   width: 30rem;
   height: 20rem;

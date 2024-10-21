@@ -31,6 +31,10 @@ $XL: 1130px;
 
 /* ___ Scrollbar ___ */
 
+html {
+  scroll-behavior: smooth;
+}
+
 html ::-webkit-scrollbar {
   width: 10px;
 }

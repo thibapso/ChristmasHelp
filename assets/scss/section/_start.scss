@@ -1,68 +1,89 @@
-@use "../variables";
+@use "../variables" as v;
 
 body {
-  font-family: variables.$font;
+  font-family: v.$font;
 }
 
-.start__content {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 3rem 10rem;
-  background: #ffe9e8;
-  gap: 5rem;
-}
+.start {
+  &__content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem 10rem;
+    background: #ffe9e8;
+    gap: 5rem;
+  }
 
-.start__first {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-}
+  &__first {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
 
-.start__tag {
-  color: #161212;
-  font-family: Archivo;
-  font-size: 1rem;
-  font-style: normal;
-  font-weight: 500;
-  line-height: normal;
-}
+  &__tagging {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
 
-.start__titulo {
-  color: #121214;
-  font-family: Archivo;
-  font-size: 2rem;
-  font-style: normal;
-  font-weight: 600;
-  line-height: 120%;
-  width: 25rem;
-}
+  &__tag {
+    color: v.$dark-color;
+    font-family: v.$font;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: v.$medium;
+    line-height: normal;
+  }
 
-.start__titulo span {
-  color: #cd3c32;
-}
+  &__titulo {
+    color: #121214;
+    font-family: v.$font;
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 120%;
+    width: 25rem;
+  }
 
-.button {
-  display: flex;
-  padding: 0.8rem 2rem;
-  justify-content: center;
-  align-items: center;
-  border-radius: 0.25rem;
-  font-size: 0.8rem;
-  font-weight: 700;
-  color: #ffffff;
-  background: #cd3c32;
-  width: 40%;
-  transition: 0.3s;
-  cursor: pointer;
-  text-decoration: none;
-}
+  &__titulo span {
+    color: #cd3c32;
+  }
 
-.button:hover {
-  background: #cf291e;
-}
+  &__paragraph {
+    color: v.$dark-color;
+    font-family: v.$font;
+    font-size: 1.25rem;
+    font-style: normal;
+    font-weight: v.$regular;
+    line-height: 150%;
+    max-width: 34rem; /* Ajuste este valor para controlar a quebra */
+  }
 
-.start__img img {
-  width: 31.25rem;
-  height: 21.1875rem;
+  &__link {
+    text-decoration: none;
+  }
+
+  &__button {
+    display: flex;
+    padding: 0.8rem 2rem;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0.25rem;
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: #ffffff;
+    background: #cd3c32;
+    width: 12rem;
+    transition: 0.3s;
+    cursor: pointer;
+  }
+
+  .button:hover {
+    background: #cf291e;
+  }
+
+  &__img img {
+    width: 31.25rem;
+    height: 21.1875rem;
+  }
 }
