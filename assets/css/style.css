@@ -75,7 +75,7 @@ body {
   font-style: normal;
   font-weight: 400;
   line-height: 150%;
-  max-width: 34rem; /* Ajuste este valor para controlar a quebra */
+  max-width: 34rem;
 }
 .start__link {
   text-decoration: none;
@@ -99,11 +99,51 @@ body {
   width: 31.25rem;
   height: 21.1875rem;
 }
+@media screen and (max-width: 1375px) {
+  .start .start__paragraph {
+    font-size: 1rem;
+    width: 25rem;
+  }
+}
+@media screen and (max-width: 1050px) {
+  .start .start__content {
+    gap: 3rem;
+  }
+  .start .start__img img {
+    width: 26rem;
+    height: 16rem;
+  }
+}
+@media screen and (max-width: 900px) {
+  .start .start__content {
+    flex-direction: column;
+  }
+  .start .start__first {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 1rem;
+  }
+}
+@media screen and (max-width: 425px) {
+  .start .start__titulo {
+    width: 20rem;
+  }
+  .start .start__paragraph {
+    width: 18rem;
+  }
+  .start .start__img img {
+    width: 20rem;
+    height: 10rem;
+  }
+}
 
 .time {
   display: flex;
   justify-content: center;
   padding: 5rem 0;
+  overflow: hidden;
 }
 .time__content {
   display: flex;
@@ -111,6 +151,7 @@ body {
   justify-content: center;
   align-items: center;
   text-align: center;
+  max-width: 100%;
 }
 .time__content h2 {
   margin-bottom: 1.5rem;
@@ -124,6 +165,7 @@ body {
   width: 26rem;
   line-height: 150%;
   font-size: 1.1rem;
+  max-width: 100%;
 }
 .time__timer {
   justify-content: center;
@@ -137,12 +179,32 @@ body {
   width: 30rem;
   height: 20rem;
   object-fit: cover;
+  max-width: 100%;
+}
+@media screen and (max-width: 480px) {
+  .time {
+    padding: 3rem 0;
+  }
+  .time__timer {
+    font-size: 2rem;
+  }
+  .time__content img {
+    width: 20rem;
+    height: 10rem;
+  }
+}
+@media screen and (max-width: 425px) {
+  .time__description {
+    width: 21rem;
+    max-width: 100%;
+  }
 }
 
 .arvore {
   display: flex;
   padding: 5rem 0;
   justify-content: center;
+  overflow: hidden;
 }
 .arvore__content {
   display: flex;
@@ -150,6 +212,7 @@ body {
   align-items: center;
   width: 75%;
   gap: 10rem;
+  max-width: 100%;
 }
 .arvore div img {
   width: 18.5rem;
@@ -160,16 +223,19 @@ body {
   flex-direction: column;
   gap: 1.5rem;
   width: 25rem;
+  max-width: 100%;
 }
 .arvore__dados h3 {
   color: #121214;
   font-size: 1.85rem;
   font-weight: 700;
+  max-width: 100%;
 }
 .arvore__paragraph {
   color: #121214;
   line-height: 150%;
   font-size: 1rem;
+  max-width: 100%;
 }
 .arvore__link {
   display: inline-block;
@@ -187,6 +253,68 @@ body {
 .arvore__link:hover {
   background: #bc1408;
 }
+@media screen and (max-width: 1110px) {
+  .arvore .arvore__dados h3 {
+    font-size: 1.5rem;
+  }
+  .arvore .arvore__paragraph {
+    font-size: 0.85rem;
+  }
+  .arvore .arvore__link {
+    text-align: center;
+    width: 6rem;
+    font-size: 0.5rem;
+    padding: 0.5rem 1rem;
+  }
+}
+@media screen and (max-width: 900px) {
+  .arvore .arvore__content {
+    text-align: center;
+    flex-direction: column;
+    gap: 3rem;
+  }
+  .arvore .arvore__dados {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+  }
+  .arvore .arvore__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+  }
+}
+@media screen and (max-width: 480px) {
+  .arvore {
+    padding: 3rem 0;
+  }
+  .arvore__content {
+    flex-direction: column;
+    gap: 2rem;
+    max-width: 100%;
+  }
+  .arvore div img {
+    width: 10rem;
+    height: 7rem;
+  }
+  .arvore__dados {
+    max-width: 100%;
+  }
+  .arvore__paragraph {
+    max-width: 100%;
+  }
+}
+@media screen and (max-width: 425px) {
+  .arvore .arvore__dados h3 {
+    width: 12rem;
+    font-size: 1.25rem;
+  }
+  .arvore .arvore__paragraph {
+    width: 18rem;
+  }
+}
 
 footer {
   display: flex;
@@ -197,10 +325,9 @@ footer {
 
 .rodape {
   width: 75%;
-  justify-content: center;
+  justify-content: space-between;
   display: flex;
   align-items: center;
-  gap: 50rem;
 }
 .rodape__logo a {
   display: flex;
@@ -209,6 +336,7 @@ footer {
   font-size: 1.25rem;
   text-decoration: none;
   color: #121214;
+  white-space: nowrap;
 }
 .rodape__icons {
   display: flex;
@@ -227,6 +355,29 @@ footer {
 }
 .rodape__icons i:hover {
   background-color: rgb(250, 161, 156);
+}
+@media screen and (max-width: 1545px) {
+  .rodape .rodape {
+    gap: 5rem;
+  }
+  .rodape .rodape__logo a {
+    font-size: 1rem;
+    white-space: nowrap;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .rodape .rodape {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+}
+@media screen and (max-width: 460px) {
+  .rodape {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

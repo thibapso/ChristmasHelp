@@ -57,7 +57,7 @@ body {
     font-style: normal;
     font-weight: v.$regular;
     line-height: 150%;
-    max-width: 34rem; /* Ajuste este valor para controlar a quebra */
+    max-width: 34rem;
   }
 
   &__link {
@@ -83,5 +83,58 @@ body {
   &__img img {
     width: 31.25rem;
     height: 21.1875rem;
+  }
+
+  @include v.MQ(1375px) {
+    .start {
+      &__paragraph {
+        font-size: 1rem;
+        width: 25rem;
+      }
+    }
+  }
+
+  @include v.MQ(1050px) {
+    .start {
+      &__content {
+        gap: 3rem;
+      }
+
+      &__img img {
+        width: 26rem;
+        height: 16rem;
+      }
+    }
+  }
+
+  @include v.MQ(900px) {
+    .start {
+      &__content {
+        flex-direction: column;
+      }
+      &__first {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        gap: 1rem;
+      }
+    }
+  }
+
+  @include v.MQ(425px) {
+    .start {
+      &__titulo {
+        width: 20rem;
+      }
+
+      &__paragraph {
+        width: 18rem;
+      }
+      &__img img {
+        width: 20rem;
+        height: 10rem;
+      }
+    }
   }
 }
