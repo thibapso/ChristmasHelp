@@ -114,10 +114,20 @@ body {
   color: #121214;
   font-weight: 700;
 }
-.time__content p {
+.time__description {
   display: flex;
   text-align: center;
-  width: 24rem;
+  width: 26rem;
+  line-height: 150%;
+  font-size: 1.1rem;
+}
+.time__timer {
+  justify-content: center;
+  color: #cd3c32;
+  font-weight: 700;
+  font-size: 3rem;
+  width: auto;
+  margin: 2rem 0;
 }
 .time__content img {
   width: 30rem;
