@@ -7,6 +7,11 @@ html {
   scroll-behavior: smooth;
 }
 
+html ::selection {
+  color: rgb(255, 255, 255);
+  background-color: rgba(220, 38, 38, 0.75);
+}
+
 html ::-webkit-scrollbar {
   width: 10px;
 }
@@ -37,10 +42,11 @@ body {
   flex-direction: column;
   gap: 1.5rem;
 }
-.start__tagging {
+.start__tagging a {
   display: flex;
   align-items: center;
   gap: 0.75rem;
+  text-decoration: none;
 }
 .start__tag {
   color: #121214;
@@ -73,10 +79,8 @@ body {
 }
 .start__link {
   text-decoration: none;
-}
-.start__button {
   display: flex;
-  padding: 0.8rem 2rem;
+  padding: 0.75rem 1.25rem;
   justify-content: center;
   align-items: center;
   border-radius: 0.25rem;
@@ -84,12 +88,12 @@ body {
   font-weight: 700;
   color: #ffffff;
   background: #cd3c32;
-  width: 12rem;
-  transition: 0.3s;
-  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  width: 8rem;
+  gap: 1rem;
 }
-.start .button:hover {
-  background: #cf291e;
+.start__link:hover {
+  background: #bc1408;
 }
 .start__img img {
   width: 31.25rem;
@@ -137,21 +141,92 @@ body {
 
 .arvore {
   display: flex;
-  align-items: center;
+  padding: 5rem 0;
   justify-content: center;
 }
-
+.arvore__content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 75%;
+  gap: 10rem;
+}
 .arvore div img {
   width: 18.5rem;
   height: 17.5rem;
 }
+.arvore__dados {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  width: 25rem;
+}
+.arvore__dados h3 {
+  color: #121214;
+  font-size: 1.85rem;
+  font-weight: 700;
+}
+.arvore__paragraph {
+  color: #121214;
+  line-height: 150%;
+  font-size: 1rem;
+}
+.arvore__link {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  color: #ffffff;
+  background: #cd3c32;
+  border-radius: 0.25rem;
+  text-decoration: none;
+  font-weight: 700;
+  transition: background-color 0.3s ease;
+  font-size: 0.75rem;
+  width: 8rem;
+  transition: all 0.3s ease-in-out;
+}
+.arvore__link:hover {
+  background: #bc1408;
+}
 
-.footer {
+footer {
   display: flex;
   justify-content: center;
   padding: 2rem;
-  background-color: #121214;
-  color: #ffffff;
+  background-color: #ffe9e8;
+}
+
+.rodape {
+  width: 75%;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  gap: 50rem;
+}
+.rodape__logo a {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 1.25rem;
+  text-decoration: none;
+  color: #121214;
+}
+.rodape__icons {
+  display: flex;
+  gap: 1.5rem;
+}
+.rodape__icons a {
+  text-decoration: none;
+}
+.rodape__icons i {
+  background-color: rgb(255, 213, 211);
+  border-radius: 50%;
+  color: #cd3c32;
+  font-size: 1.5rem;
+  padding: 0.5rem;
+  transition: all 0.3s ease-in-out;
+}
+.rodape__icons i:hover {
+  background-color: rgb(250, 161, 156);
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -12,6 +12,7 @@ $bold: 700;
 
 /* ___ Colors ___ */
 $brand-color: #cd3c32;
+$hover-button-color: #bc1408;
 
 $dark-color: #121214;
 $light-color: #ffffff;
@@ -33,6 +34,11 @@ $XL: 1130px;
 
 html {
   scroll-behavior: smooth;
+}
+
+html ::selection {
+  color: rgb(255, 255, 255, 1);
+  background-color: rgb(220, 38, 38, 0.75);
 }
 
 html ::-webkit-scrollbar {

@@ -1,12 +1,57 @@
-@use "../variables";
+@use "../variables" as v;
 
 .arvore {
   display: flex;
-  align-items: center;
+  padding: 5rem 0;
   justify-content: center;
-}
 
-.arvore div img {
-  width: 18.5rem;
-  height: 17.5rem;
+  &__content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 75%;
+    gap: 10rem;
+  }
+
+  div img {
+    width: 18.5rem;
+    height: 17.5rem;
+  }
+
+  &__dados {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    width: 25rem;
+  }
+
+  &__dados h3 {
+    color: v.$dark-color;
+    font-size: 1.85rem;
+    font-weight: v.$bold;
+  }
+
+  &__paragraph {
+    color: v.$dark-color;
+    line-height: 150%;
+    font-size: 1rem;
+  }
+
+  &__link {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    color: v.$light-color;
+    background: v.$brand-color;
+    border-radius: 0.25rem;
+    text-decoration: none;
+    font-weight: v.$bold;
+    transition: background-color 0.3s ease;
+    font-size: 0.75rem;
+    width: 8rem;
+    transition: all 0.3s ease-in-out;
+  }
+
+  &__link:hover {
+    background: v.$hover-button-color;
+  }
 }
