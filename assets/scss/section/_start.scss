@@ -1,0 +1,140 @@
+@use "../variables" as v;
+
+body {
+  font-family: v.$font;
+}
+
+.start {
+  &__content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem 10rem;
+    background: #ffe9e8;
+    gap: 5rem;
+  }
+
+  &__first {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  &__tagging a {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    text-decoration: none;
+  }
+
+  &__tag {
+    color: v.$dark-color;
+    font-family: v.$font;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: v.$medium;
+    line-height: normal;
+  }
+
+  &__titulo {
+    color: #121214;
+    font-family: v.$font;
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 120%;
+    width: 25rem;
+  }
+
+  &__titulo span {
+    color: v.$brand-color;
+  }
+
+  &__paragraph {
+    color: v.$dark-color;
+    font-family: v.$font;
+    font-size: 1.25rem;
+    font-style: normal;
+    font-weight: v.$regular;
+    line-height: 150%;
+    max-width: 34rem;
+  }
+
+  &__link {
+    text-decoration: none;
+    display: flex;
+    padding: 0.75rem 1.25rem;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0.25rem;
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: #ffffff;
+    background: v.$brand-color;
+    transition: all 0.3s ease-in-out;
+    width: 8rem;
+    gap: 1rem;
+  }
+
+  &__link:hover {
+    background: v.$hover-button-color;
+  }
+
+  &__img img {
+    width: 31.25rem;
+    height: 21.1875rem;
+  }
+
+  @include v.MQ(1375px) {
+    .start {
+      &__paragraph {
+        font-size: 1rem;
+        width: 25rem;
+      }
+    }
+  }
+
+  @include v.MQ(1050px) {
+    .start {
+      &__content {
+        gap: 3rem;
+      }
+
+      &__img img {
+        width: 26rem;
+        height: 16rem;
+      }
+    }
+  }
+
+  @include v.MQ(900px) {
+    .start {
+      &__content {
+        flex-direction: column;
+      }
+      &__first {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        gap: 1rem;
+      }
+    }
+  }
+
+  @include v.MQ(425px) {
+    .start {
+      &__titulo {
+        width: 20rem;
+      }
+
+      &__paragraph {
+        width: 18rem;
+      }
+      &__img img {
+        width: 20rem;
+        height: 10rem;
+      }
+    }
+  }
+}

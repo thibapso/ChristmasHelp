@@ -1,0 +1,143 @@
+@use "../variables" as v;
+
+.arvore {
+  display: flex;
+  padding: 5rem 0;
+  justify-content: center;
+  overflow: hidden; // Impede o overflow dos elementos
+
+  &__content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 75%;
+    gap: 10rem;
+    max-width: 100%; // Limita a largura a 100%
+  }
+
+  div img {
+    width: 18.5rem;
+    height: 17.5rem;
+  }
+
+  &__dados {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    width: 25rem;
+    max-width: 100%; // Evita que a largura ultrapasse a tela
+  }
+
+  &__dados h3 {
+    color: v.$dark-color;
+    font-size: 1.85rem;
+    font-weight: v.$bold;
+    max-width: 100%;
+  }
+
+  &__paragraph {
+    color: v.$dark-color;
+    line-height: 150%;
+    font-size: 1rem;
+    max-width: 100%;
+  }
+
+  &__link {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    color: v.$light-color;
+    background: v.$brand-color;
+    border-radius: 0.25rem;
+    text-decoration: none;
+    font-weight: v.$bold;
+    transition: background-color 0.3s ease;
+    font-size: 0.75rem;
+    width: 8rem;
+    transition: all 0.3s ease-in-out;
+  }
+
+  &__link:hover {
+    background: v.$hover-button-color;
+  }
+
+  // Ajustes para telas de 1110px ou menos
+  @include v.MQ(1110px) {
+    .arvore {
+      &__dados h3 {
+        font-size: 1.5rem;
+      }
+      &__paragraph {
+        font-size: 0.85rem;
+      }
+      &__link {
+        text-align: center;
+        width: 6rem;
+        font-size: 0.5rem;
+        padding: 0.5rem 1rem;
+      }
+    }
+  }
+
+  // Ajustes para telas de 900px ou menos
+  @include v.MQ(900px) {
+    .arvore {
+      &__content {
+        text-align: center;
+        flex-direction: column;
+        gap: 3rem;
+      }
+
+      &__dados {
+        display: flex;
+        justify-content: center;
+        align-items: center; // Centraliza o conteúdo dentro de 900px
+        max-width: 100%; // Evita overflow
+      }
+
+      &__link {
+        display: flex;
+        justify-content: center;
+        align-items: center; // Centraliza o link apenas em 900px ou menos
+        margin: 0 auto; // Centraliza o link horizontalmente
+      }
+    }
+  }
+
+  // Ajustes para telas de 480px ou menos
+  @include v.MQ(480px) {
+    padding: 3rem 0;
+
+    &__content {
+      flex-direction: column;
+      gap: 2rem; // Diminui o gap em telas menores
+      max-width: 100%; // Limita a largura a 100%
+    }
+
+    div img {
+      width: 10rem;
+      height: 7rem;
+    }
+
+    &__dados {
+      max-width: 100%; // Garante que os dados não ultrapassem a tela
+    }
+
+    &__paragraph {
+      max-width: 100%; // Previne vazamento do parágrafo
+    }
+  }
+
+  // Ajustes para telas de 425px ou menos
+  @include v.MQ(425px) {
+    .arvore {
+      &__dados h3 {
+        width: 12rem;
+        font-size: 1.25rem;
+      }
+
+      &__paragraph {
+        width: 18rem;
+      }
+    }
+  }
+}

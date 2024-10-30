@@ -1,0 +1,67 @@
+@use "../variables" as v;
+
+.time {
+  display: flex;
+  justify-content: center;
+  padding: 5rem 0;
+  overflow: hidden; // Impede o overflow dos elementos
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    max-width: 100%; // Limita a largura a 100%
+  }
+
+  &__content h2 {
+    margin-bottom: 1.5rem;
+    font-size: 2.5rem;
+    color: v.$dark-color;
+    font-weight: v.$bold;
+  }
+
+  &__description {
+    display: flex;
+    text-align: center;
+    width: 26rem; // Ajustar para não exceder a tela
+    line-height: 150%;
+    font-size: 1.1rem;
+    max-width: 100%; // Adiciona um limite de largura
+  }
+
+  &__timer {
+    justify-content: center;
+    color: v.$brand-color;
+    font-weight: v.$bold;
+    font-size: 3rem;
+    width: auto;
+    margin: 2rem 0;
+  }
+
+  &__content img {
+    width: 30rem; // Ajustar largura para ser mais responsivo
+    height: 20rem;
+    object-fit: cover;
+    max-width: 100%; // Limita a largura da imagem a 100% do contêiner
+  }
+
+  @include v.MQ(480px) {
+    padding: 3rem 0;
+    &__timer {
+      font-size: 2rem;
+    }
+    &__content img {
+      width: 20rem; // Ajustar para dispositivos menores
+      height: 10rem;
+    }
+  }
+
+  @include v.MQ(425px) {
+    &__description {
+      width: 21rem; // Ajustar para que não exceda a tela
+      max-width: 100%; // Limitar a largura a 100%
+    }
+  }
+}

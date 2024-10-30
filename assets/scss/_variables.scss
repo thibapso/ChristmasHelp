@@ -1,0 +1,55 @@
+/* ___ Fonts ___ */
+
+@import url("https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&display=swap");
+
+$font: "Archivo", "Calibri", "sans-serif";
+
+$thin: 100;
+$light: 300;
+$regular: 400;
+$medium: 500;
+$bold: 700;
+
+/* ___ Colors ___ */
+$brand-color: #cd3c32;
+$hover-button-color: #bc1408;
+
+$dark-color: #121214;
+$light-color: #ffffff;
+
+/* ___ Media Query ___ */
+@mixin MQ($size) {
+  @media screen and (max-width: $size) {
+    @content;
+  }
+}
+
+$XS: 500px;
+$S: 770px;
+$M: 960px;
+$L: 1024px;
+$XL: 1130px;
+
+/* ___ Scrollbar ___ */
+
+html {
+  scroll-behavior: smooth;
+}
+
+html ::selection {
+  color: rgb(255, 255, 255, 1);
+  background-color: rgb(220, 38, 38, 0.75);
+}
+
+html ::-webkit-scrollbar {
+  width: 10px;
+}
+
+html ::-webkit-scrollbar-thumb {
+  border-radius: 20px;
+  background: $brand-color;
+}
+
+html ::-webkit-scrollbar-track {
+  background: rgba(41, 42, 44, 0.03);
+}

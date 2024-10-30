@@ -1,0 +1,74 @@
+@use "../variables" as v;
+
+footer {
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+  background-color: #ffe9e8;
+}
+
+.rodape {
+  width: 75%;
+  justify-content: space-between;
+  display: flex;
+  align-items: center;
+
+  &__logo a {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-size: 1.25rem;
+    text-decoration: none;
+    color: v.$dark-color;
+    white-space: nowrap; // Evitar quebra de linha
+  }
+
+  &__icons {
+    display: flex;
+    gap: 1.5rem;
+
+    a {
+      text-decoration: none;
+    }
+
+    i {
+      background-color: rgba(255, 213, 211, 1);
+      border-radius: 50%;
+      color: v.$brand-color;
+      font-size: 1.5rem;
+      padding: 0.5rem;
+      transition: all 0.3s ease-in-out;
+    }
+
+    i:hover {
+      background-color: rgb(250, 161, 156);
+    }
+  }
+
+  // Ajustes na media query para telas menores que 1545px
+  @include v.MQ(1545px) {
+    .rodape {
+      gap: 5rem; // Reduzir o gap entre os itens
+
+      &__logo a {
+        font-size: 1rem;
+        white-space: nowrap; // Garante que "Feliz Natal" não quebre
+      }
+    }
+  }
+
+  // Ajuste adicional para telas menores, se necessário
+  @include v.MQ(1024px) {
+    .rodape {
+      flex-direction: column; // Alterar a direção dos itens para se empilharem
+      align-items: center; // Centralizar tudo no centro
+      gap: 1rem; // Ajustar o gap quando os itens estiverem empilhados
+    }
+  }
+
+  @include v.MQ(460px) {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+}
